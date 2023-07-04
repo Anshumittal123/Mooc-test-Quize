@@ -1,0 +1,73 @@
+Q. 1) Explain all the CSS positions(static, fixed, sticky, relative, absolute) with one code example each.
+Ans- 1. Static:
+The default position value for an element is static. In this position, the element follows the normal document flow and is not affected by the positioning properties.
+example of code:- 
+<div class="static-position">
+  This is a static positioned element.
+</div>
+
+<style>
+.static-position {
+  position: static;
+}
+</style>
+
+2.Fixed:
+A fixed positioned element is positioned relative to the browser window. It stays fixed even when the page is scrolled.
+example of code:- 
+<div class="fixed-position">
+  This is a fixed positioned element.
+</div>
+
+<style>
+.fixed-position {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+</style>
+
+3. Sticky:
+A sticky positioned element is positioned based on the user's scroll position. It acts like relative within its parent element until a certain threshold is met, and then it becomes fixed relative to the viewport.
+example of code:- 
+<div class="sticky-position">
+  This is a sticky positioned element.
+</div>
+
+<style>
+.sticky-position {
+  position: sticky;
+  top: 50px;
+}
+</style>
+
+4. Relative:
+A relatively positioned element is positioned relative to its normal position in the document flow. It can be moved using the top, right, bottom, and left properties.
+<div class="relative-position">
+  This is a relatively positioned element.
+</div>
+
+<style>
+.relative-position {
+  position: relative;
+  top: 20px;
+  left: 50px;
+}
+</style>
+
+5. Absolute:
+An absolutely positioned element is positioned relative to its nearest positioned ancestor or the initial containing block. It is taken out of the normal document flow.
+example of code:-
+<div class="absolute-position">
+  This is an absolutely positioned element.
+</div>
+
+<style>
+.absolute-position {
+  position: absolute;
+  top: 50px;
+  right: 20px;
+}
+</style>
+
+the actual effect of these positions will depend on the context and other CSS properties applied to the elements.
