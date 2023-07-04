@@ -1,0 +1,148 @@
+Q.2) Create a form with basic validation (name, email, phone number, password, age, gender, date, color picker).
+Ans- HTML Code:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="./stye.css">
+</head>
+<body>
+    <from> 
+        <fieldset>
+            <!--Form-->
+            <legend>Details Form!!</legend>
+            <label for="name" class="name" ></label>Enter your Name: </label>
+            <!--use of the placeholder-->
+            <input type="text" name="name" size="50" id="Name" placeholder="name...">
+            <br>
+            <!--email id-->
+            <label for="Email" id="Email">Enter your Emali:</label>
+            <input type="email" name="Email" id="Email">
+            <br>
+            <!-- Contect Number -->
+            <label for="Phone Number" id="phone">Enter your phone number:</label>
+            <input type="number" name="Phone number" id="phone">
+            <br>
+            <!---password-->
+            <label for="password" id="password">Enter your password:</label>
+            <input type="password" name="password" id="password">
+            <br>
+            <!-- age -->
+            <label for="age" id="age">Enter you age:</label>
+            <input type="number" name="age" id="age">
+            <br>
+            <label for="gender" id="gender">select your gender:</label>
+            <br>
+            <label for="gender_male" id="male">Male</label>
+            <input type="radio" name="gender" id="male">
+            <br>
+            <label for="gender_female" id="female">Female</label>
+            <input type="radio" name="gender" id="female">
+            <br>
+            <!-- Date -->
+            <label for="Date" id="data">Enter Date</label>
+            <input type="date" name="Date" id="data">
+            <br>
+            <!-- color picker -->
+            <label for="color picker" id="color">Pick color</label>
+            <input type="color" name="color picker" id="color">
+            <br>
+            <!--using submit button-->
+            <input type="submit" name="submit" class="submit">
+        </fieldset>
+    </form>
+</body>
+</html>
+
+
+CSS Code:
+body{
+    background-image: url(https://img.freepik.com/premium-vector/print_586360-903.jpg?w=740);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+fieldset{
+    width: 40%;
+    position: relative;
+    left: 350px;
+    height: 600px;
+    background-color: #c7dbf8;
+    border-radius: 10px;
+}
+
+legend{
+    font-size: 25px;
+    font-weight: 900;
+    color: #ce4915;
+}
+
+.submit{
+    padding: 10px 25px;
+    border-radius: 10px;
+    background-color: #0c21dd;
+    font-size: 15px;
+    font-weight: bolder;
+    position: relative;
+    top: 320px;
+    cursor: pointer;
+}
+
+.submit.submit:hover{
+    background-color: #0c21dd;
+    color: #000000;
+    font-weight: bolder;
+}
+
+#color{
+    position: relative;
+    top: 290px;
+}
+
+#data{
+    position: relative;
+    top: 260px;
+}
+
+#female{
+    position: relative;
+    top: 240px;
+}
+
+#male{
+    position: relative;
+    top: 230px;
+}
+
+#gender{
+    position: relative;
+    top: 210px;
+}
+
+#male{
+    position: relative;
+    top: 230px;
+}
+
+#age{
+    position: relative;
+    top: 190px;
+}
+
+#password{
+    position: relative;
+    top: 140px;
+}
+
+#phone{
+    position: relative;
+    top: 90px;
+}
+
+#Email{
+    position: relative;
+    top: 40px;
+}
