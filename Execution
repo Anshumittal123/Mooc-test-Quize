@@ -1,0 +1,24 @@
+Q.3) Explain what is execution context in detail with diagram.
+Ans- In JavaScript, an execution context is an abstract concept that holds information about the environment in which a piece of code is executed. It consists of three main components: the Variable Environment, the Lexical Environment, and the "this" value. The execution context is crucial for understanding how JavaScript code is executed.
+Here's a detailed explanation of each component of the execution context, along with a diagram: 
+Variable Environment:
+The Variable Environment is where all the variables and function declarations are stored. It keeps track of the variables and their values within the current scope. Each time a function is called, a new Variable Environment is created for that function.
+Lexical Environment:
+The Lexical Environment represents the current scope and the environment in which the code is executed. It includes all the variables, function declarations, and block scopes that are accessible in the current context. The Lexical Environment is essentially a record of all the variables and functions available in the current scope and its parent scopes.
+"this" value:
+The "this" value refers to the context in which a function is invoked. It represents the object on which a method is called or the global object (e.g., window in a browser) if the function is called without any specific context.
+The execution context forms a hierarchical structure, with each function creating its own execution context. When a function is called, a new execution context is created and pushed onto the top of the execution stack. This stack is called the "call stack," and the execution of the code begins from the topmost execution context.
+The concept of the execution context is essential for understanding variable scoping, hoisting, and function invocation in JavaScript. It helps JavaScript engines keep track of variables, maintain scope, and handle function calls appropriately.
+
++-----------------------------------------+
+|              Execution Context           |
+|                                         |
+| +-------------------------+             |
+| |    Variable Environment |             |
+| +-------------------------+             |
+| |      Lexical Environment |             |
+| +-------------------------+             |
+| |          "this"         |             |
+| +-------------------------+             |
+|                                         |
++-----------------------------------------+
