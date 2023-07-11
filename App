@@ -1,0 +1,62 @@
+2. Create a app where you have an input box and whenever a user types something in the input box and hits submit it should be added on the webpage below the input box.
+Ans- Html code-
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Input App</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div id="app-container">
+    <h1>User Input App</h1>
+    <input type="text" id="user-input" placeholder="Enter text">
+    <button id="submit-btn">Submit</button>
+    <ul id="user-list"></ul>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+css code:-
+#app-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#user-input {
+  padding: 10px;
+  margin-right: 10px;
+}
+
+#submit-btn {
+  padding: 10px 20px;
+}
+
+#user-list {
+  list-style-type: none;
+  margin-top: 20px;
+  padding: 0;
+}
+
+#user-list li {
+  margin-bottom: 10px;
+}
+
+javasrcipt code:-
+document.addEventListener('DOMContentLoaded', function() {
+  const userInput = document.getElementById('user-input');
+  const submitBtn = document.getElementById('submit-btn');
+  const userList = document.getElementById('user-list');
+
+  submitBtn.addEventListener('click', function() {
+    const userInputValue = userInput.value;
+    
+    if (userInputValue.trim() !== '') {
+      const listItem = document.createElement('li');
+      listItem.textContent = userInputValue;
+      userList.appendChild(listItem);
+      userInput.value = '';
+    }
+  });
+});
+
